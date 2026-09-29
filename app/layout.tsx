@@ -1,16 +1,35 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
+import { Navbar } from "@/ui/LayoutComponets/Navbar";
+import localFont from "next/font/local";
+import { Footer } from "@/ui/LayoutComponets/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+
+const satoshi = localFont({
+  src: [
+    {
+      path: "../public/font/Satoshi-Light.woff2",
+      weight: "300",
+    },
+    {
+      path: "../public/font/Satoshi-Medium.woff2",
+      weight: "500",
+    },
+    {
+      path: "../public/font/Satoshi-Bold.woff2",
+      weight: "700",
+    },
+    {
+      path: "../public/font/Satoshi-Black.woff2",
+      weight: "900",
+    },
+  ],
+  variable: "--font-satoshi",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,9 +40,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${satoshi.variable}  h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col font-satoshi ">
+        
+        {children}
+      </body>
     </html>
   );
 }
