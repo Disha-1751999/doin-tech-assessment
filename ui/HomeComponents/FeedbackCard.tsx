@@ -43,7 +43,7 @@ export function FeedbackCard({
       </div>
 
       <p className="mt-5 text-[14px] leading-[1.75] text-[#666873]">
-        "{quote}"
+        &ldquo;{quote}&rdquo;
       </p>
     </article>
   );

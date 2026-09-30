@@ -1,7 +1,6 @@
 "use client";
 
 import {
-  Badge,
   BriefcaseBusiness,
   Camera,
   Code2,
@@ -47,22 +46,22 @@ const categories: CourseCategory[] = [
 export function CourseCategories() {
   return (
     <section className="bg-white py-16 md:py-20">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-5 sm:px-6">
         {/* Heading */}
          <div className="mx-auto max-w-212.5 text-center">
-          <h2 className="text-[34px] font-bold leading-[1.18] tracking-[-1.5px] text-[#080d25] sm:text-[38px]">
+          <h2 className="text-[28px] font-bold leading-[1.18] tracking-[-1px] sm:tracking-[-1.5px] md:text-[34px] text-[#080d25] lg:text-[38px]">
             Explore Diverse Learning Paths at Bytespace
           </h2>
 
           <p className="mt-4 text-[14px] leading-6 text-[#9a9ca7] sm:text-[15px]">
            At Bytespace, we believe in empowering individuals through knowledge. Our diverse range of courses spans various 
             <br className="hidden sm:block" />
-            fields, ensuring there's something for everyone. Unleash your potential and explore our carefully curated categories.
+            fields, ensuring there&apos;s something for everyone. Unleash your potential and explore our carefully curated categories.
           </p>
         </div>
 
         {/* Categories */}
-        <div className="mt-12 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-6">
+        <div className="mt-10 grid grid-cols-2 gap-3 sm:mt-12 sm:gap-5 sm:grid-cols-3 lg:grid-cols-6">
           {categories.map((category) => (
             <CategoryCard
               key={category.title}

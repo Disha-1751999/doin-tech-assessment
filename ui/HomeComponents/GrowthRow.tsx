@@ -24,7 +24,7 @@ export function GrowthRow({
     <div className="w-full max-w-117.5">
       <h2
         className="
-          text-[28px]
+          text-[26px]
           font-bold
           leading-[1.15]
           tracking-[-1px]
@@ -42,12 +42,10 @@ export function GrowthRow({
       <div
         className="
           mt-4
-          text-[12px]
+          text-[14px]
           leading-[1.7]
           text-[#9a9ca7]
 
-          sm:text-[13px]
-          lg:text-[14px]
           xl:text-[15px]
         "
       >
@@ -63,7 +61,7 @@ export function GrowthRow({
                 {stat.value}
               </div>
 
-              <div className="mt-0.5 text-[11px] text-[#666873] sm:text-[13px]">
+              <div className="mt-0.5 text-[12px] text-[#666873] sm:text-[13px]">
                 {stat.label}
               </div>
             </div>
@@ -77,7 +75,7 @@ export function GrowthRow({
           {checklist.map((item) => (
             <div
               key={item}
-              className="flex items-center gap-2 text-[11px] text-[#34353c] sm:text-[13px]"
+              className="flex items-center gap-2 text-[13px] text-[#34353c]"
             >
               <span className="flex h-3 w-3 shrink-0 items-center justify-center rounded-full bg-[#004cff] text-[8px] text-white">
                 ✓
@@ -112,7 +110,7 @@ const contentWithOrder = (
 );
 
 return (
-  <div className="grid items-center justify-center gap-8 sm:gap-10 lg:grid-cols-2 lg:gap-12 xl:gap-20">
+  <div className="grid items-center gap-8 sm:gap-10 lg:grid-cols-2 lg:gap-12 xl:gap-20">
     {contentPosition === "left" ? (
       <>
         {contentWithOrder}

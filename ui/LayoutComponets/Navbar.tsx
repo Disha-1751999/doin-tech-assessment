@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Menu, MenuIcon, ShoppingBag, ShoppingCart } from "lucide-react";
+import { Menu, MenuIcon, ShoppingBag } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -23,7 +23,7 @@ const navItems = [
 export function Navbar() {
   return (
     <header className="absolute inset-x-0 top-0 z-50 w-full bg-primary">
-      <div className="mx-auto max-w-7xl px-6 lg:px-44">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* Desktop Navbar */}
         <nav className="hidden h-20 grid-cols-3 items-center md:grid">
           {/* Left - Logo */}
@@ -116,7 +116,7 @@ export function Navbar() {
             
             </SheetTrigger>
 
-            <SheetContent side="right" className="w-75 sm:w-90 bg-gray-50 border-none ">
+            <SheetContent side="right" className="w-[85vw] max-w-90 bg-gray-50 border-none ">
               <SheetHeader>
                 <SheetTitle><MenuIcon/></SheetTitle>
               </SheetHeader>

@@ -6,7 +6,7 @@ import Image from "next/image";
 export function GrowthShowcase() {
   return (
     <section
-      className="overflow-hidden py-16 md:py-24"
+      className="overflow-hidden py-14 md:py-24"
       style={{
         backgroundColor: "#ffffff",
         backgroundImage: `
@@ -33,7 +33,7 @@ export function GrowthShowcase() {
         `,
       }}
     >
-      <div className="mx-auto max-w-6xl space-y-20 px-6">
+      <div className="mx-auto max-w-6xl space-y-16 px-5 sm:px-6 md:space-y-20">
 
         {/* ROW 1 */}
         <GrowthRow

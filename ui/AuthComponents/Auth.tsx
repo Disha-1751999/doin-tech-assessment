@@ -175,11 +175,7 @@ export default function Auth({ mode }: AuthProps) {
                 src={AuthImage}
                 alt=""
                 priority
-                sizes="
-                  (max-width: 639px) 90vw,
-                  (max-width: 1023px) 500px,
-                  450px
-                "
+                sizes="(max-width: 639px) 90vw, (max-width: 1023px) 500px, 450px"
                 className="
                   h-auto
                   w-full

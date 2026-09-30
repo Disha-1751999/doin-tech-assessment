@@ -115,7 +115,7 @@ export default function CoursesSection() {
       <div className="mx-auto max-w-260 px-5 sm:px-6">
         {/* Heading */}
         <div className="mx-auto max-w-212.5 text-center">
-          <h2 className="text-[34px] font-bold leading-[1.18] tracking-[-1.5px] text-[#080d25] sm:text-[38px]">
+          <h2 className="text-[28px] font-bold leading-[1.18] tracking-[-1px] sm:tracking-[-1.5px] md:text-[34px] text-[#080d25] lg:text-[38px]">
             Discover Your Passion,
             <br />
             Build Your Skills
@@ -131,11 +131,11 @@ export default function CoursesSection() {
         </div>
 
         {/* Categories */}
-        <div className="mx-auto mt-9 flex max-w-237.5 flex-wrap justify-center gap-x-3 gap-y-4">
+        <div className="mx-auto mt-9 flex max-w-237.5 flex-wrap justify-center gap-2 sm:gap-x-3 sm:gap-y-4">
           {categories.map((category, index) => (
             <button
               key={category}
-              className={`rounded-full px-3.75 py-2.25 text-[13px] font-medium transition ${
+              className={`rounded-full px-3 py-2 text-[12px] sm:px-3.75 sm:py-2.25 sm:text-[13px] font-medium transition ${
                 index === 0
                   ? "bg-[#c6ff00] text-[#111827]"
                   : "bg-[#f5f5f7] text-[#4b4d57] hover:bg-[#ededf0]"
@@ -151,7 +151,7 @@ export default function CoursesSection() {
         </div>
 
         {/* Course Grid */}
-        <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid grid-cols-1 gap-6 sm:mt-16 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
           {courses.map((course) => (
             <CourseCard key={course.title} course={course} />
           ))}
@@ -252,7 +252,7 @@ function CourseCard({
 
 function Stat({ children }: { children: React.ReactNode }) {
   return (
-    <span className="rounded-full bg-white/75 px-3 py-1.5 text-[10px] font-medium text-[#555861] backdrop-blur-md">
+    <span className="whitespace-nowrap rounded-full bg-white/75 px-2 py-1 text-[9px] sm:px-3 sm:py-1.5 sm:text-[10px] font-medium text-[#555861] backdrop-blur-md">
       {children}
     </span>
   );

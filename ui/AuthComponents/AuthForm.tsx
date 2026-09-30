@@ -24,7 +24,7 @@ export default function AuthForm({
         w-full max-w-102.5
         rounded-[20px]
         bg-white
-        px-8 py-9
+        px-6 py-8
         shadow-[0_20px_60px_rgba(0,0,0,0.08)]
         sm:px-10 sm:py-11
         lg:max-w-102.5
@@ -94,7 +94,7 @@ export default function AuthForm({
 
       {/* Social login */}
       {!isRegister && (
-        <div className="mt-14">
+        <div className="mt-10 sm:mt-14">
           <div className="flex items-center gap-3">
             <div className="h-px flex-1 bg-[#dedede]" />
             <span className="text-[12px] text-[#999]">or</span>
@@ -117,7 +117,7 @@ export default function AuthForm({
       <div
         className={`
           text-center text-[13px] text-[#999]
-          ${isRegister ? "mt-20" : "mt-14"}
+          ${isRegister ? "mt-12 sm:mt-20" : "mt-10 sm:mt-14"}
         `}
       >
         {isRegister ? (

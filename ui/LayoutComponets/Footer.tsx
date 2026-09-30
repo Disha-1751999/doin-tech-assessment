@@ -19,12 +19,12 @@ const footerColumns = [
 
 export function Footer() {
   return (
-    <footer className="w-full bg-white px-6 py-12 md:px-10 lg:px-16">
+    <footer className="w-full bg-white px-5 py-12 sm:px-6 md:px-10 lg:px-16">
       <div className="mx-auto max-w-296">
         {/* Main Footer */}
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-[3fr_1fr_1fr_1fr] lg:gap-10 text-gray-950  items-center font-light">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-[3fr_1fr_1fr_1fr] lg:gap-10 text-gray-950 items-start font-light">
           {/* Newsletter */}
-          <div>
+          <div className="col-span-2 sm:col-span-3 lg:col-span-1">
             {/* Logo */}
             <Link href="/" className="mb-4 flex items-center gap-2">
              <Image
@@ -43,7 +43,7 @@ export function Footer() {
             </p>
 
             {/* Newsletter Form */}
-            <form className="mt-11 flex max-w-123.25 flex-col gap-3 sm:flex-row">
+            <form className="mt-8 flex max-w-123.25 sm:mt-11 flex-col gap-3 sm:flex-row">
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -88,7 +88,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Divider */}
-        <div className="mt-24 border-t border-[#D8D8D8] pt-6  text-gray-950 font-light">
+        <div className="mt-12 border-t md:mt-24 border-[#D8D8D8] pt-6  text-gray-950 font-light">
           <div className="flex flex-col gap-5 text-[12px]  md:flex-row md:items-center md:justify-between">
             <p>© 2023 ByteSpace. All rights reserved.</p>
 

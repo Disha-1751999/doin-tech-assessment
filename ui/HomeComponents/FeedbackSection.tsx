@@ -61,7 +61,7 @@ export function FeedbackSection() {
             <h2
               className="
                 max-w-md
-                text-[34px] font-bold leading-[1.18] tracking-[-1.5px] text-black/90 sm:text-[38px]
+                text-[28px] font-bold leading-[1.18] tracking-[-1px] sm:tracking-[-1.5px] md:text-[34px] text-black/90 lg:text-[38px]
               "
             >
               Discover What Our
@@ -82,7 +82,7 @@ export function FeedbackSection() {
         </div>
 
         {/* Cards */}
-        <div className="mt-10 grid gap-5 md:grid-cols-3">
+        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((testimonial) => (
             <FeedbackCard
               key={testimonial.name}
