@@ -29,7 +29,7 @@ export function CreatorCTA() {
           className="
             mt-6 rounded-full
             bg-[#d9ff00]
-            px-6 py-4
+            px-6 py-3
             text-sm font-medium
             text-[#111827]
             transition

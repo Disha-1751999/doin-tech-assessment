@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import { Menu, MenuIcon, ShoppingBag } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -20,7 +22,36 @@ const navItems = [
   { label: "Creators", href: "#creators" },
 ];
 
+function useActiveHref() {
+  const pathname = usePathname();
+  const [hash, setHash] = useState("");
+
+  useEffect(() => {
+    const update = () => setHash(window.location.hash);
+    update();
+    window.addEventListener("hashchange", update);
+    window.addEventListener("popstate", update);
+    return () => {
+      window.removeEventListener("hashchange", update);
+      window.removeEventListener("popstate", update);
+    };
+  }, [pathname]);
+
+  const isActive = (href: string) =>
+    href.startsWith("#")
+      ? pathname === "/" && hash === href
+      : pathname === href && (href !== "/" || hash === "");
+
+  // Next's Link uses pushState, which doesn't fire hashchange
+  const onNavigate = (href: string) =>
+    setHash(href.startsWith("#") ? href : "");
+
+  return { isActive, onNavigate };
+}
+
 export function Navbar() {
+  const { isActive, onNavigate } = useActiveHref();
+
   return (
     <header className="absolute inset-x-0 top-0 z-50 w-full bg-primary">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -49,7 +80,11 @@ export function Navbar() {
               <Link
                 key={item.label}
                 href={item.href}
-                className="font-poppins text-base font-medium text-gray-50 transition-colors hover:text-white"
+                onClick={() => onNavigate(item.href)}
+                aria-current={isActive(item.href) ? "page" : undefined}
+                className={`font-poppins text-sm  text-gray-50 transition-colors hover:text-white ${
+                  isActive(item.href) ? "font-bold" : "font-light"
+                }`}
               >
                 {item.label}
               </Link>
@@ -57,19 +92,19 @@ export function Navbar() {
           </div>
 
           {/* Right - Actions */}
-          <div className="flex items-center justify-end gap-3">
+          <div className="flex items-center justify-end gap-3 font-light">
             <Button
               variant="ghost"
               className="text-white hover:bg-white/10 hover:text-white"
             >
-              <Link href="/login">Sign In</Link>
+              <Link href="/login" className="font-light">Sign In</Link>
             </Button>
 
             <Button
               variant="ghost"
               className="text-white hover:bg-white/10 hover:text-white"
             >
-              <Link href="#get-started">Join Us</Link>
+              <Link href="/register" className="font-light">Join Us</Link>
             </Button>
 
             <Button
@@ -126,7 +161,11 @@ export function Navbar() {
                   <Link
                     key={item.label}
                     href={item.href}
-                    className="rounded-lg px-4 py-3 text-sm font-medium transition-colors hover:bg-muted"
+                    onClick={() => onNavigate(item.href)}
+                    aria-current={isActive(item.href) ? "page" : undefined}
+                    className={`rounded-lg px-4 py-3 text-sm transition-colors hover:bg-muted ${
+                      isActive(item.href) ? "font-bold" : "font-normal"
+                    }`}
                   >
                     {item.label}
                   </Link>

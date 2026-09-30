@@ -9,13 +9,13 @@ import { Testimonial } from "@/ui/HomeComponents/Testimonial";
 export default function Home() {
   return (
     <>
-    <Hero/>
-    <Testimonial/>
-    <CoursesSection/>
-    <CourseCategories/>
-    <GrowthShowcase/>
-    <CreatorCTA/>
-    <FeedbackSection/>
+      <Hero />
+      <Testimonial />
+      <CoursesSection />
+      <CourseCategories />
+      <GrowthShowcase />
+      <CreatorCTA />
+      <FeedbackSection />
     </>
   );
 }

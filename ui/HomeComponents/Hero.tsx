@@ -13,14 +13,14 @@ export function Hero() {
   return (
     <section className="relative mt-20 w-full overflow-hidden">
       {/* Hero background */}
-      <div className="relative min-h-140 w-full sm:min-h-160 md:min-h-170 lg:aspect-1300/800 lg:min-h-0">
+      <div className="relative min-h-140 w-full sm:min-h-160 md:min-h-170 lg:aspect-1440/1024 lg:min-h-0">
         <Image
           src={HeroFrame}
           alt=""
           priority
           sizes="100vw"
           fill
-          className="object-cover"
+          className="object-cover object-bottom"
         />
 
         {/* Content */}
@@ -34,7 +34,7 @@ export function Hero() {
               </h1>
 
               {/* Description */}
-              <p className="mx-auto mt-5 max-w-2xl px-2 text-sm font-normal leading-6 text-white/80 sm:mt-6 sm:px-4 sm:text-base sm:leading-7 md:text-lg">
+              <p className="mx-auto mt-5 max-w-2.5xl px-2 text-sm font-light leading-6 text-white/80 sm:mt-6 sm:px-4 sm:leading-7 sm:text-base">
                 Unlock your creativity, gain valuable knowledge, and grow your
                 business with our wide range of courses.
               </p>
@@ -44,7 +44,7 @@ export function Hero() {
                 <div className="flex w-full items-center gap-2 sm:gap-3">
                   <InputGroup className="h-11 sm:h-12 text-gray-500 min-w-0 flex-1 rounded-full border border-gray-300 bg-white px-3 shadow-sm focus-within:border-blue-500 focus-within:ring-1 focus-within:ring-blue-500 sm:px-4">
                     <InputGroupAddon align="inline-start">
-                      <SearchIcon className="size-4 sm:size-5" />
+                      <SearchIcon className="size-3 sm:size-4 text-gray-500" />
                     </InputGroupAddon>
 
                     <InputGroupInput

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
 
-
 const satoshi = localFont({
   src: [
     {
@@ -26,8 +25,6 @@ const satoshi = localFont({
   display: "swap",
 });
 
-
-
 export const metadata: Metadata = {
   title: "Bytespace",
   description: "Get Access to Hundreds Courses Available",
@@ -35,13 +32,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="en"
-      className={`${satoshi.variable}  h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col font-satoshi">        
-        {children}
-      </body>
+    <html lang="en" className={`${satoshi.variable}  h-full antialiased`}>
+      <body className="min-h-full flex flex-col font-satoshi">{children}</body>
     </html>
   );
 }

@@ -47,7 +47,7 @@ export function Footer() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="h-12.75 flex-1 rounded-full border border-[#D2D2D2] px-6 text-[14px]  outline-none placeholder:text-[#444] focus:border-[#C8FF00]"
+                className="h-12.75 w-full shrink-0 sm:flex-1 sm:w-auto rounded-full border border-[#D2D2D2] px-6 text-[14px]  outline-none placeholder:text-[#444] focus:border-[#C8FF00]"
               />
 
               <button

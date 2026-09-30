@@ -1,8 +1,9 @@
-import Auth from '@/ui/AuthComponents/Auth'
-import React from 'react'
+import Auth from "@/ui/AuthComponents/Auth";
 
-export default function page ()  {
+export default function page() {
   return (
-    <><Auth mode="login" /></>
-  )
+    <>
+      <Auth mode="login" />
+    </>
+  );
 }

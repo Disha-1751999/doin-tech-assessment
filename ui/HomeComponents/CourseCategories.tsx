@@ -81,7 +81,7 @@ function CategoryCard({
 }: CourseCategory) {
   return (
     <Card className="group rounded-2xl  ring ring-[#E6E7EB]! bg-white shadow-none transition-all duration-200 hover:-translate-y-1 hover:shadow-sm">
-      <CardContent className="flex h-28.75 flex-col items-center justify-center p-3">
+      <CardContent className="flex h-24.75  flex-col items-center justify-center">
         <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#c8ff00] text-[#252a19]">
           <Icon size={21} strokeWidth={2.5} />
         </div>

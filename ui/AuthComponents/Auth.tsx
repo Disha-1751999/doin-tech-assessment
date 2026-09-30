@@ -41,13 +41,9 @@ export default function Auth({ mode }: AuthProps) {
           w-full
 
           bg-[linear-gradient(to_right,rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.12)_1px,transparent_1px)]
-          bg-[size:84px_84px]
+          bg-size-[84px_84px]
         "
       >
-        {/* =====================================================
-            LOGO
-        ====================================================== */}
-
         <div
           className="
             absolute
@@ -75,11 +71,6 @@ export default function Auth({ mode }: AuthProps) {
             className="object-contain"
           />
         </div>
-
-        {/* =====================================================
-            AUTH CONTENT
-        ====================================================== */}
-
         <div
           className="
             mx-auto
@@ -101,32 +92,25 @@ export default function Auth({ mode }: AuthProps) {
             lg:grid
             lg:grid-cols-[450px_1fr]
             lg:items-start
-            lg:gap-[55px]
+            lg:gap-13.75
             lg:px-0
-            lg:pt-[108px]
+            lg:pt-27
 
             xl:grid-cols-[450px_475px]
-            xl:gap-[55px]
+            xl:gap-13.75
 
-            lg:max-w-[980px]
-            xl:max-w-[980px]
+            lg:max-w-245
+            xl:max-w-245
           "
         >
-          {/* ===================================================
-              LEFT SIDE
-          ==================================================== */}
-
           <section className="w-full font-satoshi">
-            {/* Heading */}
             <div
               className="
                 mb-8
                 w-full
-                max-w-[390px]
-
+                max-w-97.5
                 sm:mb-10
-
-                lg:mb-[48px]
+                lg:mb-12
               "
             >
               <h2
@@ -147,21 +131,17 @@ export default function Auth({ mode }: AuthProps) {
               <p
                 className="
                   mt-3
-                  max-w-[390px]
+                  max-w-97.5
                   text-[12px]
                   leading-[1.65]
                   text-white/80
-
                   sm:text-[13px]
-
                   lg:text-[14px]
                 "
               >
                 {content.description}
               </p>
             </div>
-
-            {/* Illustration */}
             <div
               className="
                 flex
@@ -179,17 +159,12 @@ export default function Auth({ mode }: AuthProps) {
                 className="
                   h-auto
                   w-full
-                  max-w-[450px]
+                  max-w-112.5
                   object-contain
                 "
               />
             </div>
           </section>
-
-          {/* ===================================================
-              RIGHT SIDE
-          ==================================================== */}
-
           <section
             className="
               mt-12
