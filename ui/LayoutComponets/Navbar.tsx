@@ -179,14 +179,14 @@ export function Navbar() {
                   Sign In
                 </Link>
                  <Link
-                  href="/login"
+                  href="/register"
                   className="rounded-lg px-4 py-3 text-sm font-medium transition-colors hover:bg-muted"
                 >
                  Join Us
                 </Link>
 
                 <Link
-                  href="/login"
+                  href="/"
                   className="rounded-lg px-4 py-3 text-sm font-medium transition-colors hover:bg-muted"
                 >
                  Cart
