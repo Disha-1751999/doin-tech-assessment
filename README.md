@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Bytespace — Doin Tech Assessment
+
+A responsive landing page for **Bytespace**, an online course platform, plus Login and Register pages.
+
+**Live demo:** https://doin-tech-assessment-alpha.vercel.app/
+
+## Tech Stack
+
+| Area            | Technology                                                                 |
+| --------------- | -------------------------------------------------------------------------- |
+| Framework       | [Next.js 16](https://nextjs.org) (App Router)                              |
+| UI library      | [React 19](https://react.dev)                                              |
+| Language        | [TypeScript 5](https://www.typescriptlang.org)                             |
+| Styling         | [Tailwind CSS v4](https://tailwindcss.com) + `tw-animate-css`              |
+| UI components   | [shadcn/ui](https://ui.shadcn.com) built on [Base UI](https://base-ui.com) |
+| Variants        | `class-variance-authority`                                                 |
+| Icons           | [Lucide React](https://lucide.dev)                                         |
+| Fonts           | Satoshi (self-hosted via `next/font/local`)                                |
+| Images          | `next/image`                                                               |
+| Linting         | ESLint 9 (`eslint-config-next`)                                            |
+| Deployment      | [Vercel](https://vercel.com)                                               |
+
+## Project Structure
+
+```
+.
+├── app/
+│   ├── (auth)/                 # Route group for authentication pages
+│   │   ├── layout.tsx
+│   │   ├── login/page.tsx      # /login
+│   │   └── register/page.tsx   # /register
+│   ├── (home)/                 # Route group for the landing page
+│   │   ├── layout.tsx          # Navbar + Footer wrapper
+│   │   └── page.tsx            # / (home)
+│   ├── globals.css             # Tailwind setup and theme tokens
+│   └── layout.tsx              # Root layout, Satoshi font, metadata
+├── components/
+│   └── ui/                     # shadcn/ui primitives (button, card, input, sheet, ...)
+├── ui/
+│   ├── AuthComponents/         # Auth page layout and form
+│   ├── HomeComponents/         # Landing page sections
+│   │   ├── Hero.tsx
+│   │   ├── Testimonial.tsx
+│   │   ├── CoursesSection.tsx
+│   │   ├── CourseCategories.tsx
+│   │   ├── GrowthShowcase.tsx / GrowthRow.tsx
+│   │   ├── CreatorCTA.tsx
+│   │   └── FeedbackSection.tsx / FeedbackCard.tsx
+│   └── LayoutComponets/        # Navbar and Footer
+├── lib/
+│   └── utils.ts                # Shared helpers
+└── public/
+    ├── font/                   # Satoshi font files
+    └── images/                 # Logos, hero, course and author images
+```
+
+## Features
+
+- Responsive layout for mobile, tablet and desktop
+- Desktop navbar and a slide-out mobile menu (Sheet); only the active nav item is bold
+- Landing page sections: hero with search, partner logos, courses, categories, growth showcase, creator CTA and feedback
+- Login and Register pages with a shared auth layout
+- Optimized images and self-hosted fonts
 
 ## Getting Started
 
-First, run the development server:
+**Prerequisites:** Node.js 20+ and npm.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Install dependencies:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+   ```bash
+   npm install
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. Start the development server:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+   ```bash
+   npm run dev
+   ```
 
-## Learn More
+3. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-To learn more about Next.js, take a look at the following resources:
+## Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Command         | Description                          |
+| --------------- | ------------------------------------ |
+| `npm run dev`   | Start the development server         |
+| `npm run build` | Create a production build            |
+| `npm run start` | Run the production build             |
+| `npm run lint`  | Run ESLint                           |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The app is deployed on Vercel: https://doin-tech-assessment-alpha.vercel.app/
